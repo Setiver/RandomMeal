@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const RandomMeal = () => {
   const [mealFetch, setMealFetch] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
-  const [ingredient, setIngredient] = useState([]);
 
   async function fetchData() {
     try {
@@ -42,9 +41,8 @@ const RandomMeal = () => {
           Roll
         </button>
       </div>
-
       {isLoaded ? (
-        <div className="meal-info">
+        <div className={`meal-info`}>
           <h2>{mealFetch.strMeal}</h2>
           <div className="instructions scroll">
             <h3>{mealFetch.strInstructions}</h3>

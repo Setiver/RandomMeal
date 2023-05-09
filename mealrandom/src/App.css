@@ -13,6 +13,19 @@ body {
 
   background-color: rgb(151, 255, 219);
 }
+.meal-info {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .text-front-page {
   display: flex;
@@ -142,4 +155,13 @@ h2 {
   position: absolute;
   top: 25%;
   left: 1%;
+}
+
+.look-display {
+  opacity: 0;
+}
+
+.look-display.opacity {
+  transition: 0.5s ease-in-out;
+  opacity: 1;
 }
