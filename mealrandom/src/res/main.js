@@ -36,7 +36,7 @@ const RandomMeal = () => {
       <div className={`text-front-page ${isLoaded === false ? '' : 'move'}`}>
         <h1>Hungry?</h1>
         <p>🎲Let's roll some food🍔</p>
-        <p>🍴And get's you on the mood🥢</p>
+        <p>🍴And get you on the mood🥢</p>
         <button className="roll-button" onClick={fetchData}>
           Roll
         </button>
@@ -64,10 +64,7 @@ const RandomMeal = () => {
           {mealFetch.strYoutube ? (
             <div>
               <div className="yt-div">
-                <iframe
-                  title="YT Video"
-                  className="yt-inframe"
-                  src={`https://www.youtube.com/embed/${mealFetch.strYoutube.slice(-11)}`}></iframe>
+                <iframe title="YT Video" className="yt-inframe" src={`https://www.youtube.com/embed/${mealFetch.strYoutube.slice(-11)}`}></iframe>
               </div>
             </div>
           ) : (
